@@ -20,10 +20,10 @@ const Nav: NextPage = () => {
 	return (
 		<div>
 			<nav
-				className={`fixed block top-0 bottom-0 bg-white duration-700 opacity-0 z-10 w-2/3 -left-80 ${
+				className={`absolute block top-0 bottom-0 bg-white duration-700 opacity-0 z-10 w-2/3 -left-80 ${
 					active ? "left-0 opacity-100" : ""
 				}`}>
-				<div className={`p-6`}>
+				<div className={`p-6 ${!active ? "hidden" : ""}`}>
 					<ul className={`list-none text-lg`}>
 						<li>
 							<Link href="/">
@@ -60,7 +60,7 @@ const Nav: NextPage = () => {
 						</li>
 						<div className={`flex`}>
 							<li>
-								<Link href="/">
+								<Link href="/Contact/">
 									<a
 										className={`flex text-gray-500 p-4 duration-300 hover:bg-indigo-300 hover:text-white`}>
 										<FiMail
@@ -103,9 +103,9 @@ const Nav: NextPage = () => {
 					</ul>
 				</div>
 			</nav>
-			<div className={`h-16 w-full bg-indigo-500 hidden lg:block`}>
-				<nav className={`fixed top-0 right-16 h-8 w-1/2 z-10 text-white`}>
-					<ul className={`flex justify-between h-16 items-center text-md`}>
+			<div className={`h-16 w-full bg-indigo-500 hidden lg:flex justify-end`}>
+				<nav className={`w-1/2 text-white`}>
+					<ul className={`flex justify-between h-16 items-center text-md mr-16`}>
 						<li>
 							<Link href="/">
 								<a>Home</a>
@@ -122,13 +122,13 @@ const Nav: NextPage = () => {
 							</Link>
 						</li>
 						<li>
-							<Link href="/">
+							<Link href="/Contact/">
 								<a>
 									<FiMail className={`h-6 w-6`} />
 								</a>
 							</Link>
 						</li>
-						<li>
+						{/* <li>
 							<Link href="/">
 								<a>
 									<FiInstagram className={`h-6 w-6`} />
@@ -148,11 +148,11 @@ const Nav: NextPage = () => {
 									<FiYoutube className={`h-6 w-6`} />
 								</a>
 							</Link>
-						</li>
+						</li> */}
 					</ul>
 				</nav>
 			</div>
-			<div className={`fixed h-16 w-full bg-indigo-500 block lg:hidden`}>
+			<div className={`h-16 w-full bg-indigo-500 block lg:hidden`}>
 				<div
 					className={`absolute top-3 right-8 h-8 w-8 z-10 cursor-pointer`}
 					onClick={open}>
