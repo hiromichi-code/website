@@ -101,7 +101,7 @@ const Contact: NextPage = () => {
 							<button
 								disabled={!disabled}
 								type="submit"
-								className={`text-center py-2 px-4 bg-indigo-500 text-white rounded-2xl`}>
+								className={`text-center h-11 w-32 bg-indigo-500 text-white rounded-3xl`}>
 								送信
 							</button>
 						</div>

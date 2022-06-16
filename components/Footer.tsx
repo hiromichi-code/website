@@ -6,7 +6,7 @@ import Link from "next/link";
 const Footer: NextPage = () => {
 	return (
 		<div
-			className={`flex justify-between items-center px-16 w-screen text-sm md:text-lg h-16 bg-gray-300`}>
+			className={`flex justify-between items-center px-8 md:px-16 w-screen text-sm md:text-lg h-16 bg-gray-300`}>
 			<div className={`w-1/2 flex justify-start`}>
 				<h2>{name}</h2>
 			</div>
